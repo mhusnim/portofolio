@@ -1,0 +1,21 @@
+# Site settings
+title: Curiculum Vitae
+description: This is web for my Curiculum Vitae and my personal portofolio
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: M Husni Mubarrok
+user_description: Seorang pekerja keras, jujur dan bertanggung jawab merupakan ciri utama dari diri saya dalam hal pekerjaan yang sedang saya kerjakan,  serta mampu bekerja terhadap tekanan dengan bekerja sendiri maupun pekerjaan yang membutuhkan kerja sama tim, suka terhadap tantangan baru serta mempunyai rasa ingin tahu tentang hal yang terbaru. motto dari diri saya yang dapat memotivasi pribadi saya adalah “mulai dari sekarang selagi masih ada waktu” dan juga “Kerjakan sebaik mungkin amanah dan tanggung jawab dengan rasa ikhlas”.
+email: mhusnimubarrok@gmail.com
+facebook_username: connecting.husni
+github_username:  mhusnim
+linkedin_username:  mhusnim
+
+# Google-analytics
+google-analytics:
+  id: ""
+
+show_downloads: true
+
+exclude: ['package.json', 'src' , 'node_modules']
