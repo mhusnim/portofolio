@@ -1,8 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body style="overflow-x:hidden">
+      <!-- <div id="preloader">
+          <div id="status">&nbsp;</div>
+      </div> -->
+
       {% include header.html %}
-      
+      <div class="container text-center">
+        <div class="profile-group">
+          <div class="profile">
+            <div class="col-md-5">
+              <div class="profile-photo">
+                <img src="{{ "/assets/img/me.jpg" | prepend: site.baseurl }}" alt="">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="profile-info">
+                <h1 class="profile-title"><span>I'm</span> Muhammad Husni Mubarrok</h1>
+                <h2 class="profile-position">UI/UX , Graphic Designer , Frontend Developer</h2>
+              </div>
+              <ul class="profile-list">
+                <li class="clearfix">
+                  <strong class="title">Date of Birth</strong>
+                  <span class="cont">Gresik, 21st March 1995</span>
+                </li>
+                <li class="clearfix">
+                  <strong class="title">Gender</strong>
+                  <span class="cont">Male</span>
+                </li>
+                <li class="clearfix">
+                  <strong class="title">Religion</strong>
+                  <span class="cont">Islam</span>
+                </li>
+                <li class="clearfix">
+                  <strong class="title">Status</strong>
+                  <span class="cont">Single</span>
+                </li>
+                <li class="clearfix">
+                  <strong class="title">Mail</strong>
+                  <span class="cont">mhusnimubarrok@gmail.com</span>
+                </li>
+                <li class="clearfix">
+                  <strong class="title">Phone Number</strong>
+                  <span class="cont">+62 8573 3048 855</span>
+                </li>
+                <li class="clearfix">
+                  <strong class="title">Address</strong>
+                  <span class="cont">Jl. Timur Pasar Rt.05/Rw.02 Dukun desa.Dukuanyar, kecamatan.Dukun, Kabupaten Gresik, Provinsi.Jawa Timur, Indonesia</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="profile-social">
+            <ul class="media_social">
+              <li>
+                <a class="ripple-centered" href="https://facebook.com/{{site.facebook_username}}" target="_blank"><i class="rsicon fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a class="ripple-centered" href="https://linkedin.com/in/{{site.linkedin_username}}" target="_blank"><i class="rsicon fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a class="ripple-centered" href="https://github.com/{{site.github_username}}" target="_blank"><i class="rsicon fa fa-github-alt"></i></a>
+              </li>
+              <li>
+                <a class="ripple-centered" href="mailto:{{site.email}}"><i class="rsicon fa fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="button-control">
+            <a href="https://www.dropbox.com/s/ya1smfw4l1xxe1q/cv.pdf?dl=0" target="_blank" class="btn btn-primary btn-lg">Download CV</a>
+            <a href="#contact" class="btn btn-default btn-lg">Hire Me</a>
+        </div>
+      </div>
+      <section id="about">
+        {% include about.html %}
+      </section>
+      <section id="do">
+        {% include do.html %}
+      </section>
+      <section id="education">
+        {% include education.html %}
+      </section>
+      <section id="experience" class="panel -trusted">
+        {% include experience.html %}
+      </section>
+      <section id="skill">
+        {% include skill.html %}
+      </section>
+      <section id="portofolio">
+        {% include portofolio.html %}
+      </section>
+      <section id="contact">
+        {% include contact.html %}
+      </section>
+        {{ content }}
       {% include footer.html %}
   </body>

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="contact_title  wow fadeInUp animated">
+        <h1>Contact</h1>
+        <img src="{{ "/assets/img/shape.png" | prepend: site.baseurl }}" alt="">
+        <p>I am very welcome to contact me by filling out of the form below and I will reply as soon as possible</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3  wow fadeInLeft animated">
+      <div class="single_contact_info">
+        <h2>Call Me</h2>
+        <p>+62 8573 3048 855</p>
+      </div>
+      <div class="single_contact_info">
+        <h2>Email Me</h2>
+        <p>mhusnimubarrok@gmail.com</p>
+      </div>
+      <div class="single_contact_info">
+        <h2>Address</h2>
+        <p>Jl. Timur Pasar Rt.05/Rw.02 Dukun desa.Dukuanyar, kecamatan.Dukun, Kabupaten Gresik, Provinsi.Jawa Timur, Indonesia</p>
+      </div>
+    </div>
+    <div class="col-md-9  wow fadeInRight animated">
+      <form class="contact-form" id="contact_form" action="https://formspree.io/mhusnimubarrok@gmail.com" method="POST">
+        <div class="large-12 columns">
+          <p id="thanks" style="display: none;">
+            Thanks for contacting us, we'll be in touch soon!
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <input class="form-control" id="name" name="name" placeholder="NAME" type="text">
+            <input class="form-control" id="email" name="email" placeholder="EMAIL" type="text">
+            <input class="form-control" id="subject" name="subject" placeholder="SUBJECT" type="text">
+          </div>
+          <div class="col-md-6">
+            <textarea class="form-control" name="message" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
+            <input type="hidden" name="_next" value="{{ "/assets/thank.html" | prepend: site.baseurl }}" />
+            <input class="btn submit-btn form_submit" type="submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
