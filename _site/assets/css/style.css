@@ -236,7 +236,7 @@ p.level {
 	text-align: center;
 	background: #eceef3;
 	position: inherit;
-	display: -webkit-box;
+	display: inline-block;
 	padding: 57px 50px 15px 50px;
 	width: 100%;
 	z-index: 2;
@@ -444,7 +444,7 @@ p.level {
 	-webkit-box-shadow: 1px 0px 7px #888888;
 	-moz-box-shadow: 1px 0px 7px #888888;
 	background: #fbfbfb;
-	display: -webkit-inline-box;
+	display: inline-block;
 	width: 100%;
 }
 .skill-title {
@@ -618,13 +618,31 @@ p.level {
 	transition: all 1s;
 
 }
+.image_overlay button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.image_overlay button:visited, .image_overlay button:hover, .image_overlay button:focus {
+	box-shadow: none;
+}
 .image_overlay a{
 	position: absolute;
-	top: 20px;
-	right: 20px;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
 }
 .image_overlay h2{
 	position: absolute;
@@ -1036,4 +1054,50 @@ p.span {
 	padding: 10px 25px;
 	margin-top: 25px;
 	margin-bottom: 50px;
+}
+/*Modal*/
+.col-md-12.product_img {
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.col-md-12.product_img img {
+    width: 100%;
+    padding: 0px;
+}
+.modal-body {
+    position: relative;
+    padding: 0 15px 15px 15px;
+}
+a.class.pull-right{
+	color: #16b76d;
+    text-decoration: none;
+    font-size: 20px;
+}
+.modal-title {
+    font-size: 18px;
+    color: #139e5f;
+}
+.col-md-12.product_content p {
+    font-size: 12px;
+    text-align: justify;
+}
+@media (min-width: 768px){
+	.modal-dialog {
+	    width: 600px;
+	    margin: 60px auto;
+	}
+}
+.modal-backdrop {
+    background-color: #05335a;
+}
+.morePortofolio{
+	border-top: 10px solid rgba(38, 64, 120, 0.88);
+	padding: 30px 0;
+}
+.breadcrumb {
+    padding: 10px 35px;
+    margin-bottom: 50px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
 }

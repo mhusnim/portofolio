@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <div class="morePortofolio">
+    <ol class="breadcrumb">
+      <li><a href="{{ "../#about" | prepend: site.baseurl }}" class="linkfromportofolio">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+
+    <div class="container text-center">
+      <div class="row">
+        <ol id="controls">
+          <li><a href="#" id="web">Web</a></li>
+          <li><a href="#" id="canvas">Canvas</a></li>
+          <li><a href="#" id="print">Print</a></li>
+          <li><a href="#" id="all">All</a></li>
+        </ol>
+        <div id="gallery" class="-text-center">
+          
+            <div class="col-md-4 single_image web">
+              <img src="{{ "/assets/img/no-photo.jpg" | prepend: site.baseurl }}"alt="">
+              <div class="image_overlay">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> View Project</button>
+                <h2>title</h2>
+                <h4>describe</h4>
+              </div>                 <!-- <img src="https://davidrhysthomas.co.uk/img/dexter.png" /> -->
+          </div>
+          <div class="col-md-4 single_image canvas">
+              <img src="{{ "/assets/img/no-photo.jpg" | prepend: site.baseurl }}"alt="">
+              <div class="image_overlay">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> View Project</button>
+                <h2>title</h2>
+                <h4>describe</h4>
+              </div>             <!-- <img src="https://davidrhysthomas.co.uk/img/mandark.png"/> -->
+          </div>
+          <div class="col-md-4 single_image print">
+              <img src="{{ "/assets/img/no-photo.jpg" | prepend: site.baseurl }}"alt="">
+              <div class="image_overlay">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> View Project</button>
+                <h2>title</h2>
+                <h4>describe</h4>
+              </div>
+          <!-- <img src="https://davidrhysthomas.co.uk/img/drPooh2.png" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="contact">
+      {% include contact.html %}
+    </section>
+  </div>
+
+  {{ content }}
+
+  {% include footer.html %}
+</body>

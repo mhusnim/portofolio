@@ -69,5 +69,28 @@
   ga('create', 'UA-105571154-1', 'auto');
   ga('send', 'pageview');
 </script>
-
+<script type="text/javascript">
+        
+        $('#controls li a').click(
+    function(e){
+        e.preventDefault();
+        var that = this,
+            $that = $(that),
+            id = that.id,
+            gallery = $('#gallery');
+        if (id == 'all') {
+            gallery.find('div:hidden').fadeIn(1000);
+        }
+        else {
+            gallery.find('div.' + id + ':hidden').fadeIn(1000);
+            gallery.find('div').not('.' + id).fadeOut(1000);
+        }
+    });
+      </script>
+      <script type="text/javascript">
+function myscroll(myID){
+    var offset = jQuery("#"+myID).offset()
+    window.scrollTo(0,offset.top);
+}
+</script>
 {% include google-analytics.html %}
