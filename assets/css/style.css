@@ -632,7 +632,7 @@ p.level {
 }
 .single_image img{
 	width: 100%;
-
+	height: 180px;
 }
 .single_image:hover div.image_overlay{
 	opacity: 1;
