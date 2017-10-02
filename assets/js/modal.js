@@ -23,7 +23,7 @@ $.getJSON(url, function(data) {
       } else {
         clas = "";
       }
-      mview += '<li class="item' + k + ' ' + clas + '"></li>';
+      mview += '<li class="item' + k + ' ' + clas + '" data-target="#myCarousel" data-slide-to="'+ k + j + '"></li>';
       k++;
     }
     mview += '</ol>';
@@ -70,7 +70,7 @@ $.getJSON(url, function(data) {
 
 
 
-    modalview += '<div id="myCarousel" class="carousel slide" data-ride="carousel">';
+    // modalview += '<div id="myCarousel" class="carousel slide" data-ride="carousel">';
     // modalview += '<ol class="carousel-indicators">';
     // modalview += '<li class="item1 active"></li>';
     // modalview += '<li class="item2"></li>';
@@ -81,12 +81,13 @@ $.getJSON(url, function(data) {
     // modalview += '<div class="item"><img class="img-responsive" src="/assets/img/no-photo2.jpg" alt="..."></div>';
     // modalview += '<div class="item"><img class="img-responsive" src="/assets/img/no-photo3.jpg" alt="..."></div>';
     // modalview += '</div>';
+    modalview += '<div id="myCarousel' + i + '" class="carousel slide" data-ride="carousel">';
     mySplitResult[i] = entry[i]['gsx$link']['$t'].split(",");
     modalview += myFunction(mySplitResult[i]);
 
-    modalview += '<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">';
+    modalview += '<a class="left carousel-control" href="#myCarousel' + i + '" role="button" data-slide="prev">';
     modalview += '<span class="glyphicon glyphicon-chevron-left"></span></a>';
-    modalview += '<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">';
+    modalview += '<a class="right carousel-control" href="#myCarousel' + i + '" role="button" data-slide="next">';
     modalview += '<span class="glyphicon glyphicon-chevron-right"></span></a></div>';
 
     // mySplitResult = entry[i]['gsx$link']['$t'].split(",");
@@ -153,11 +154,15 @@ $.getJSON(url, function(data) {
   $('.viewModal').html(modalview);
   $('.portofolioPreview').html(tportofolio);
 
-  $("#myCarousel").carousel();
-  $(".left").click(function(){
-      $("#myCarousel").carousel("prev");
-  });
-  $(".right").click(function(){
-      $("#myCarousel").carousel("next");
-  });
+  var myId = '#myCarousel';
+  for (var i = 0; i < entry.length; i++) {
+
+    $(myId+i).carousel();
+    $(".left").click(function(){
+        $(myId+i).carousel("prev");
+    });
+    $(".right").click(function(){
+        $(myId+i).carousel("next");
+    });
+  }
 });
