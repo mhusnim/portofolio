@@ -1,6 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
+<!doctype html>
+<html>
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://mhusnim.github.io/portofolio/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mhusnim.github.io/portofolio/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mhusnim.github.io/portofolio/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://mhusnim.github.io/portofolio/assets/img/favicon/manifest.json">
+<link rel="mask-icon" href="https://mhusnim.github.io/portofolio/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="https://mhusnim.github.io/portofolio/assets/img/favicon/favicon.ico">
+<meta name="msapplication-config" content="https://mhusnim.github.io/portofolio/assets/img/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800|Montserrat" rel="stylesheet">
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="{{ "/assets/style.css" | prepend: site.baseurl }}">
+<link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet">
+</head>
 <body>
   <div class="morePortofolio">
     <ol class="breadcrumb">
@@ -9,44 +31,26 @@
       <li class="active">Data</li>
     </ol>
 
-    <div class="container text-center">
+    <div class="container">
       <div class="row">
-        <ol id="controls">
-          <li><a href="#" id="web">Web</a></li>
-          <li><a href="#" id="canvas">Canvas</a></li>
-          <li><a href="#" id="print">Print</a></li>
-          <li><a href="#" id="all">All</a></li>
-        </ol>
-        <div id="gallery" class="-text-center">
-          
-            <div class="col-md-4 single_image web">
-              <img src="{{ "/assets/img/no-photo.jpg" | prepend: site.baseurl }}"alt="">
-              <div class="image_overlay">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> View Project</button>
-                <h2>title</h2>
-                <h4>describe</h4>
-              </div>                 <!-- <img src="https://davidrhysthomas.co.uk/img/dexter.png" /> -->
-          </div>
-          <div class="col-md-4 single_image canvas">
-              <img src="{{ "/assets/img/no-photo.jpg" | prepend: site.baseurl }}"alt="">
-              <div class="image_overlay">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> View Project</button>
-                <h2>title</h2>
-                <h4>describe</h4>
-              </div>             <!-- <img src="https://davidrhysthomas.co.uk/img/mandark.png"/> -->
-          </div>
-          <div class="col-md-4 single_image print">
-              <img src="{{ "/assets/img/no-photo.jpg" | prepend: site.baseurl }}"alt="">
-              <div class="image_overlay">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> View Project</button>
-                <h2>title</h2>
-                <h4>describe</h4>
-              </div>
-          <!-- <img src="https://davidrhysthomas.co.uk/img/drPooh2.png" /> -->
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+          <div class="work_title  wow fadeInUp animated">
+            <h2>Portofolio</h2>
+            <img src="{{ "/assets/img/shape.png" | prepend: site.baseurl }}" alt="">
           </div>
         </div>
+
+        <div align="center">
+          <button class="btn btn-default filter-button" data-filter="all">All</button>
+          <button class="btn btn-default filter-button" data-filter="web">web</button>
+          <button class="btn btn-default filter-button" data-filter="photo">photo</button>
+          <button class="btn btn-default filter-button" data-filter="video">video</button>
+        </div>
+        <br/>
+        <div class="console"></div>
       </div>
     </div>
+
     <section id="contact">
       {% include contact.html %}
     </section>
@@ -54,5 +58,9 @@
 
   {{ content }}
 
+  {% include modal.html %}
+
   {% include footer.html %}
+  <!-- <div class="loading"></div> -->
 </body>
+</html>

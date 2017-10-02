@@ -1,4 +1,5 @@
 # Site settings
+permalink: pretty
 title: Curiculum Vitae & Portofolio
 description: This is web for my Curiculum Vitae and my personal portofolio
 # baseurl: "/particle" # the subpath of your site, e.g. /blog

@@ -16,6 +16,45 @@ $(function() {
 
 
 //OWL CAROSEL TESTIMONIAL
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    dotsEach:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+// $('.owl-carousel').owlCarousel({
+//   navigation : true,
+//     slideSpeed : 300,
+//     paginationSpeed : 400,
+//     singleItem:true,
+//     loop:true,
+//     margin:10,
+//     nav:false,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         600:{
+//             items:1
+//         },
+//         1000:{
+//             items:1
+//         }
+//     }
+// })
+
 // $('.owl-carousel').owlCarousel({
 //     loop:true,
 //     margin:10,

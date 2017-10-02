@@ -12,6 +12,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3  wow fadeInLeft animated">
+      <img src="https://drive.google.com/open?id=0Bz0xs1nae2RadnNRc3RSTHVqYm8" alt="" />
       <div class="single_contact_info">
         <h2>Call Me</h2>
         <p>+62 8573 3048 855</p>
@@ -27,19 +28,26 @@
     </div>
     <div class="col-md-9  wow fadeInRight animated">
       <form class="contact-form" id="contact_form" action="https://formspree.io/mhusnimubarrok@gmail.com" method="POST">
-        <div class="large-12 columns">
+        <!-- <div class="large-12 columns">
           <p id="thanks" style="display: none;">
             Thanks for contacting us, we'll be in touch soon!
           </p>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-md-6">
-            <input class="form-control" id="name" name="name" placeholder="NAME" type="text">
-            <input class="form-control" id="email" name="email" placeholder="EMAIL" type="text">
-            <input class="form-control" id="subject" name="subject" placeholder="SUBJECT" type="text">
+            <div id="name-error-dialog"></div>
+            <input class="form-control" id="name" name="name" placeholder="NAME" type="text" data-validation="required"
+		 data-validation-error-msg="You did not enter a Name" data-validation-error-msg-container="#name-error-dialog">
+            <div id="email-error-dialog"></div>
+            <input class="form-control" id="email" name="email" placeholder="EMAIL" type="text" data-validation="email" data-validation-error-msg="You did not enter a valid e-mail" data-validation-error-msg-container="#email-error-dialog">
+            <div id="subject-error-dialog"></div>
+            <input class="form-control" id="subject" name="subject" placeholder="SUBJECT" type="text" data-validation="required"
+		 data-validation-error-msg="You did not enter a subject" data-validation-error-msg-container="#subject-error-dialog">
           </div>
           <div class="col-md-6">
-            <textarea class="form-control" name="message" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
+            <div id="message-error-dialog"></div>
+            <textarea class="form-control" name="message" id="message" rows="25" cols="10" placeholder="  Message Texts..." data-validation="required"
+		 data-validation-error-msg="You did not enter a message" data-validation-error-msg-container="#message-error-dialog"></textarea>
             <input type="hidden" name="_next" value="https://mhusnim.github.io/portofolio/assets/thank.html" />
             <input class="btn submit-btn form_submit" type="submit">
           </div>
