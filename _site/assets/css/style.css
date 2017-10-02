@@ -1193,3 +1193,9 @@ a.class.pull-right{
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
+.carousel-control.left {
+    border-top-left-radius: 25px;
+}
+.carousel-control.right {
+    border-top-right-radius: 25px;
+}
