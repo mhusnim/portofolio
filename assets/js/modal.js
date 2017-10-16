@@ -101,7 +101,7 @@ $.getJSON(url, function(data) {
     // modalview += '</div>';
     modalview += '</div><div class="col-md-12 product_content">';
     modalview += '<h3 class="modal-title">' + entry[i]['gsx$project']['$t'] + '</h3>';
-    modalview += '<p>' + entry[i]['gsx$shortdescription']['$t'] + '</p>';
+    modalview += '<p>' + entry[i]['gsx$content']['$t'] + '</p>';
     modalview += '</div></div></div></div></div></div>';
 
 
