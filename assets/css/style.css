@@ -1195,7 +1195,18 @@ a.class.pull-right{
 }
 .carousel-control.left {
     border-top-left-radius: 25px;
+    left: -100px;
+    background: transparent;
 }
 .carousel-control.right {
     border-top-right-radius: 25px;
+    right: -100px;
+    background: transparent;
+}
+.left span.glyphicon.glyphicon-chevron-left, .right span.glyphicon.glyphicon-chevron-right {
+    background: #0a0421;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    border-radius: 30px;
 }
